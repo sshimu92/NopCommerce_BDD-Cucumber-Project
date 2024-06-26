@@ -46,14 +46,22 @@
 			}
 			browser_choice = prop.getProperty("browserName");
 			try {
+				
 				if (browser_choice.equalsIgnoreCase("msedge")) {
+					
 					driver = DriverSetup.invokeEdgeBrowser();
+				
 				} else if (browser_choice.equalsIgnoreCase("chrome")){
+					
 					driver = DriverSetup.invokeChromeBrowser();
+				
 				} else{
+					
 					throw new Exception("Invalid browser name provided in property file");
 				}
+			
 			} catch (Exception e) {
+				
 				reportFail(e.getMessage());
 			}
 			return driver;

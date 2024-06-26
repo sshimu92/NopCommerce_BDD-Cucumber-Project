@@ -1,7 +1,5 @@
 package step_definitions.login_page;
 
-import static org.testng.Assert.assertEquals;
-
 import org.example.pageObject.LoginPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -28,9 +26,9 @@ public class LoginWithValidCredential {
 	@Then("user input {string} as Email {string} as Password")
 	public void inputCredential(String em, String pw) {
 	    
-		ScreenShots.screenShot(driver, "C:\\Users\\shimu\\eclipse-workspace\\NopcommerceAutomation\\test-output\\ScreenShots.png");
 		lp.setEmail(em);
 		lp.setPassword(pw);
+		ScreenShots.screenShot(driver, "input credential");
 		
 	}
 
@@ -38,6 +36,7 @@ public class LoginWithValidCredential {
 	public void clickOnLoginButton() {
 	    
 		lp.clickLoginButton();
+		ScreenShots.screenShot(driver, "login button");
 	
 	}
 
@@ -45,6 +44,7 @@ public class LoginWithValidCredential {
 	public void verifyAlreadyOnHomePage() {
 	   
 		Assert.assertTrue(lp.loginIsSuccessful());
+		ScreenShots.screenShot(driver, "verify home page");
 		
 	}
 

@@ -18,7 +18,7 @@ public class ScreenShots {
 		
 		try {
 			
-			FileUtils.copyFile(source, new File("C:\\Users\\shimu\\eclipse-workspace\\NopcommerceAutomation\\screenshots.jpg"));
+			FileUtils.copyFile(source, new File("./Screenshots/"+filePath+".png"));
 		
 		} catch (IOException e) {
 			

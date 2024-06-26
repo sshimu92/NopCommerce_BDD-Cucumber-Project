@@ -91,12 +91,14 @@ public class CheckoutItems {
 	public void clickOnTermsAgreement() {
 	   
 		chkpage.clickOnAgreementOption();
+		ScreenShots.screenShot(driver, "terms of service");
 	}
 
 	@Then("User click on CHECKOUT button")
 	public void clickOnCheckout() {
 	    
 		chkpage.clickOnCheckout();
+		ScreenShots.screenShot(driver, "checkout");
 		
 	}
 
@@ -111,6 +113,7 @@ public class CheckoutItems {
 	    
 		chkpage.enterFirstName(fname);
 		chkpage.enterLastName(lname);
+		ScreenShots.screenShot(driver, "input name");
 		
 	}
 
@@ -118,6 +121,8 @@ public class CheckoutItems {
 	public void enterEmailAddress(String eml) {
 	    
 		chkpage.enterEmail(eml);
+		ScreenShots.screenShot(driver, "input email");
+		
 		
 	}
 
@@ -125,6 +130,7 @@ public class CheckoutItems {
 	public void selectCountryName(String country) {
 	    
 		chkpage.selectCountry("United States");
+		ScreenShots.screenShot(driver, "select country");
 //		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		
 	}
@@ -141,6 +147,7 @@ public class CheckoutItems {
 	public void enterCityName(String cty) {
 	   
 		chkpage.enterCity(cty);
+		ScreenShots.screenShot(driver, "select city");
 		
 	}
 
@@ -148,6 +155,7 @@ public class CheckoutItems {
 	public void enterAddress(String adrs, Integer int1) {
 	    
 		chkpage.enterAddress(adrs);
+		ScreenShots.screenShot(driver, "input address");
 		
 	}
 
@@ -155,6 +163,7 @@ public class CheckoutItems {
 	public void enterZipCode(String zc) {
 	    
 		chkpage.enterZipCode(zc);
+		ScreenShots.screenShot(driver, "input zipcode");
 		
 	}
 
@@ -162,6 +171,7 @@ public class CheckoutItems {
 	public void enterPhoneNumber(String pn) {
 	    
 		chkpage.enterPhoneNumber(pn);
+		ScreenShots.screenShot(driver, "input phone number");
 		
 	}
 
@@ -169,6 +179,7 @@ public class CheckoutItems {
 	public void clickOnContinueButton() {
 	    
 		chkpage.clickContinueButton();
+		ScreenShots.screenShot(driver, "continue button");
 		
 	}
 
@@ -176,6 +187,7 @@ public class CheckoutItems {
 	public void verifyCheckoutpg() {
 	    
 		assertEquals(driver.getTitle(), "nopCommerce demo store. Checkout");
+		ScreenShots.screenShot(driver, "verify checkoutPage");
 		
 	}
 
@@ -183,6 +195,7 @@ public class CheckoutItems {
 	public void selectGroundOption(Double grp) {
 	    
 		chkpage.clickContinueButton();
+		ScreenShots.screenShot(driver, "ground option");
 		
 	}
 
@@ -190,6 +203,7 @@ public class CheckoutItems {
 	public void selectPaymentMethod() {
 	    
 		chkpage.selectPaymentMethd();
+		ScreenShots.screenShot(driver, "payment option");
 		
 	}
 
@@ -203,6 +217,7 @@ public class CheckoutItems {
 	public void verifyCompleteCheckoutPage() {
 	    
 		assertEquals(driver.getTitle(),"Checkout");
+		ScreenShots.screenShot(driver, "verify page");
 		
 	}
 
@@ -210,6 +225,7 @@ public class CheckoutItems {
 	public void clickOnConfirmButton() {
 	    
 		chkpage.clickConfirmButton();
+		ScreenShots.screenShot(driver, "confirm");
 		
 	}
 
@@ -217,13 +233,14 @@ public class CheckoutItems {
 	public void verifySuccessfulMessage(String msg) {
 	    
 		assertEquals(driver.getTitle(), "Your order has been successfully processed!");
-		
+		ScreenShots.screenShot(driver, "message");
 	}
 
 	@When("User again click on CONTINUE button")
 	public void clickCntButton() {
 	   
 		chkpage.clickcontButton();
+		ScreenShots.screenShot(driver, "continue");
 		
 	}
 
@@ -231,6 +248,7 @@ public class CheckoutItems {
 	public void user_navigate_to_home_page() {
 	    
 		assertEquals(driver.getCurrentUrl(),"https://demo.nopcommerce.com/");
+		ScreenShots.screenShot(driver, "home page");
 		
 	}
 }
