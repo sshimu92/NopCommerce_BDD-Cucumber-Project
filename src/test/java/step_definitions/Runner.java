@@ -4,7 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions( //tags = "@positive",
-                  features = {"classpath:features/Login.feature"},
+                  features = {"classpath:features"},
                   glue = {"classpath:step_definitions"}
             )
 
